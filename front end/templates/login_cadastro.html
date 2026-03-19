@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/front end/static/style.css">
+    <title>Sistema de notificações</title>
+</head>
+
+<body>
+    <header>
+        <h1>Sistema de notificações</h1>
+    </header>
+    <main>
+        <div class="content-login" id="content-login">
+            <div class="visual" id="informacoes-login">
+                <h2>Entre para continuar</h2>
+                <form class="form">
+                    <input type="text" placeholder="insira seu nome de usuário" id="nomeV">
+                    <input type="password" placeholder="insira sua senha" id="senhaV">
+                </form>
+                <div class="botoes">
+                    <button class="enviar-dados" onclick="login()">
+                        entrar
+                    </button>
+                    <button class="mudar-tela" onclick="trocarTela('informacoes-login', 'informacoes-cadastro')">
+                        não tenho uma conta
+                    </button>
+                </div>
+            </div>
+            <div class="escondido" id="informacoes-cadastro">
+                <h2>Cadastre-se para continuar</h2>
+                <form class="form">
+                    <input type="text" placeholder="escolha seu nome de usuário" id="nomeC">
+                    <input type="email" placeholder="digite um email" id="emailC">
+                    <input type="password" placeholder="escolha sua senha" id="senhaC">
+                </form>
+                <div class="botoes">
+                    <button class="enviar-dados" onclick="cadastro()">
+                        cadastrar
+                    </button>
+                    <button class="mudar-tela" onclick="trocarTela('informacoes-cadastro', 'informacoes-login')">
+                        já tenho uma conta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>E vai tomando</p>
+    </footer>
+    <script src="/front end/static/script.js"></script>
+</body>
+
+</html>
