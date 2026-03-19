@@ -51,7 +51,7 @@ def login():
     senha = dados ["senha"]
 
     cursor.execute(
-        "SELECT id, senha FROM usuarios WHERE nome = ?",
+        "SELECT id, nome, senha FROM usuarios WHERE nome = ?",
         (nome,)
     )
 
@@ -61,14 +61,16 @@ def login():
         return jsonify({"erro": "usuário não encontrado"}), 404
     
     usuario_id = usuario[0]
-    senha_db = usuario[1]
+    usuario_nome = usuario[1]
+    senha_db = usuario[2]
 
     if senha != senha_db:
         return jsonify({"erro": "senha incorreta"}), 401
     elif senha == senha_db:
         return jsonify({
             "sucesso": "login realizado",
-            "id": usuario_id}), 200
+            "id": usuario_id,
+            "nome": usuario_nome}), 200
     
 @app.route("/enviar_notificacao", methods = ["POST"])
 def enviar_notificacao():

@@ -33,6 +33,7 @@ async function login(){
 
             if (resposta.ok){
                 localStorage.setItem("usuario_id", dados.id)
+                localStorage.setItem("usuario_nome", dados.nome)
 
                 alert("Login realizado com sucesso")
                 senha.value = ""
@@ -103,3 +104,16 @@ async function cadastro() {
         }
     }
 }
+
+const saudacao = document.getElementById("saudacao")
+const nome = localStorage.getItem("usuario_nome")
+
+saudacao.innerText = "Bem vindo, " + nome
+
+const id = localStorage.getItem("usuario_id")
+
+const notificacoes = await fetch("http://127.0.0.1:5000/notificacoes/<int:id>", {
+    
+     
+
+})

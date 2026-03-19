@@ -129,10 +129,61 @@ button{
 
 ul{
     width: 500px;
-    min-height: 50px;
+    min-height: 70px;
     height: 105%;
     border: 2px solid gray;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+li{
+    width: 400px;
+    min-height: 50px;
+    height: 110%;
+    border-radius: 10px;
+}
+
+li > h3{
+    font-size: 20px;
+}
+
+li > p{
+    font-size: 10px;
+}
+
+.nova_not{
+    border: 2px solid rgb(42, 132, 216);
+    color: black;
+}
+
+.marcar_lida{
+    width: 100px;
+    border-left: 2px solid rgb(161, 161, 161);
+}
+
+.marcar_lida > button{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(42, 132, 216);
+    color: white;
+}
+
+.antiga_not{
+    border: 2px solid rgb(161, 161, 161);
+    color: gray;
+
+}
+
+.zero_not{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(161, 161, 161);
+    border: 0;
+    margin-top: 10px;
 }
 
 footer{
